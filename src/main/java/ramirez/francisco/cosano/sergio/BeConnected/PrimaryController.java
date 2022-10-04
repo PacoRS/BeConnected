@@ -16,8 +16,7 @@ public class PrimaryController {
     @FXML
     private void switchToSecondary() throws IOException {
         App.setRoot("secondary");
-        //Image image = new Image("C:/Users/paco1/eclipse-workspace3/BeConnected/src/main/java/Imagen/a1.png");
-		//photo.setImage(image);
+       
 		
     }
 }
