@@ -4,13 +4,24 @@ import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.IMessage;
 import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.ISala;
 import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.IUser;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
-public class Message implements IMessage, Comparable<Message> {
+@XmlRootElement(name = "Message")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Message implements IMessage, Comparable<Message>, Serializable {
+    private static final long serialVersionUID = 1L;
     private ISala sala;
     private IUser user;
     private String message;
     private Integer ID;
+    @XmlJavaTypeAdapter(type = LocalDateTime.class, value = LocalDateTimeBind.class)
     private LocalDateTime date;
 
 
@@ -85,4 +96,18 @@ public class Message implements IMessage, Comparable<Message> {
     public String toString() {
         return user.getNickname() + "\n" + message+" "+ date;
     }
+}
+
+class LocalDateTimeBind extends XmlAdapter<String, LocalDateTime> {
+
+    @Override
+    public LocalDateTime unmarshal(String val) {
+        return LocalDateTime.parse(val, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS"));
+    }
+
+    @Override
+    public String marshal(LocalDateTime localDateTime) {
+        return localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS"));
+    }
+
 }

@@ -1,11 +1,19 @@
 package ramirez.francisco.cosano.sergio.BeConnected.model;
 
 import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.ISala;
-import java.util.ArrayList;
 
-public class Sala implements ISala {
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.ArrayList;
+@XmlRootElement(name = "Sala")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Sala implements ISala, Serializable {
+    private static final long serialVersionUID = 1L;
     private ArrayList<Message> messages;
-    //@XmlTransient
+    @XmlTransient
     private ArrayList<User> users;
     private String name;
     private Integer ID;
