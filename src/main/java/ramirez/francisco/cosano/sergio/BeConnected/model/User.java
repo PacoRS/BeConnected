@@ -18,9 +18,9 @@ public class User implements IUser, Serializable {
         this.ID = 0;
     }
 
-    public User(String nickname, Integer ID) {
+    public User(String nickname) {
         this.nickname = nickname;
-        this.ID = ID;
+        this.ID = (int) (Math.random() * 1000 + 1);
     }
 
     public String getNickname() {
@@ -37,6 +37,18 @@ public class User implements IUser, Serializable {
 
     public void setID(Integer ID) {
         this.ID = ID;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        } else if (obj instanceof User) {
+            User user = (User) obj;
+            return this.nickname.equals(user.nickname) && this.ID.equals(user.ID);
+        } else {
+            return false;
+        }
     }
 
     @Override
