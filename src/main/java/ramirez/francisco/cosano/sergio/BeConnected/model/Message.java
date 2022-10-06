@@ -1,8 +1,8 @@
 package ramirez.francisco.cosano.sergio.BeConnected.model;
 
 import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.IMessage;
-import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.ISala;
-import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.IUser;
+//import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.Sala;
+//import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.User;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,8 +17,8 @@ import java.time.format.DateTimeFormatter;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Message implements IMessage, Comparable<Message>, Serializable {
     private static final long serialVersionUID = 1L;
-    private ISala sala;
-    private IUser user;
+    private Sala sala;
+    private User user;
     private String message;
     private Integer ID;
     @XmlJavaTypeAdapter(type = LocalDateTime.class, value = LocalDateTimeBind.class)
@@ -33,7 +33,7 @@ public class Message implements IMessage, Comparable<Message>, Serializable {
         this.date= null;
     }
 
-    public Message(ISala sala, IUser user, String message, Integer ID, LocalDateTime date) {
+    public Message(Sala sala, User user, String message, Integer ID, LocalDateTime date) {
         this.sala = sala;
         this.user = user;
         this.message = message;
@@ -41,19 +41,19 @@ public class Message implements IMessage, Comparable<Message>, Serializable {
         this.date = date;
     }
 
-    public ISala getSala() {
+    public Sala getSala() {
         return sala;
     }
 
-    public void setSala(ISala sala) {
+    public void setSala(Sala sala) {
         this.sala = sala;
     }
 
-    public IUser getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(IUser user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
