@@ -16,6 +16,10 @@ public class PrimaryController {
 
 	private static User globalUser;
 	@FXML
+
+    protected static User globalUser;
+	@FXML 
+
 	private ImageView photo;
 	@FXML
 	private TextField name;
