@@ -20,7 +20,7 @@
       <TextField fx:id="name" layoutX="167.0" layoutY="294.0" prefHeight="33.0" prefWidth="282.0" />
       <ImageView fx:id="photo" fitHeight="200.0" fitWidth="199.0" layoutX="209.0" layoutY="27.0">
          <image>
-            <Image url="@../../../../../../java/Imagen/a1.png" />
+            <Image url="@Imagen/a1.png" />
          </image>
       </ImageView>
    </children>
