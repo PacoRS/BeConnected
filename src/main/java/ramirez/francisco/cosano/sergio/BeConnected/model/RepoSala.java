@@ -1,6 +1,9 @@
 package ramirez.francisco.cosano.sergio.BeConnected.model;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.xml.bind.JAXBContext;
@@ -48,6 +51,18 @@ public class RepoSala {
 			e.printStackTrace();
 		}
 	}
+	/*public static void marshal(RepoSala ur, File f) throws IOException, JAXBException {
+		try(BufferedWriter writer = new BufferedWriter(new FileWriter(f))){
+			JAXBContext context = JAXBContext.newInstance(RepoSala.class);
+			Marshaller m = context.createMarshaller();
+			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+			m.setProperty(Marshaller.JAXB_ENCODING, "utf-8");
+			m.marshal(ur, writer);
+			//writer.close();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}*/
 
 	public void loadFile(String url) {
 		JAXBContext contexto;
@@ -68,5 +83,10 @@ public class RepoSala {
 	
 	public void addSala(Sala s) {
 		salas.add(s);
+	}
+	public ArrayList<Sala> devuelveArray( ){
+		
+		return salas;
+		
 	}
 }

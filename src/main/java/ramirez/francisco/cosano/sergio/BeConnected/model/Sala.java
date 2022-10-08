@@ -30,7 +30,6 @@ public class Sala implements ISala, Serializable {
 
 	
 	public Sala(String name) {
-		super();
 		this.name = name;
 	}
 
