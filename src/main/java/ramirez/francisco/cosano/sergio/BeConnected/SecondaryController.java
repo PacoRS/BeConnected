@@ -40,12 +40,14 @@ public class SecondaryController {
                     alert.setTitle("Error");
                     alert.setHeaderText("Error");
                     alert.setContentText("El nombre de la sala ya existe, introduzca otra por favor");
+                    alert.showAndWait();
                 }
             }else{
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
                 alert.setHeaderText("Error");
                 alert.setContentText("El nombre de la sala no puede estar vacio");
+                alert.showAndWait();
             }
         }while(flag);
 
@@ -79,6 +81,7 @@ public class SecondaryController {
             alert.setTitle("Error");
             alert.setHeaderText("Error");
             alert.setContentText("El nombre de la sala no puede estar vacio");
+            alert.showAndWait();
         }
     }
 
