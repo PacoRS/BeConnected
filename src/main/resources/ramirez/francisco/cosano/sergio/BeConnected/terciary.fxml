@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.organizador.Asigmin.SecondaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.organizador.Asigmin.SecondaryController">
    <children>
       <SplitPane dividerPositions="0.6178623718887262" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="685.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -35,5 +35,6 @@
       <TextField layoutX="74.0" layoutY="404.0" prefHeight="32.0" prefWidth="258.0" />
       <Label layoutX="560.0" layoutY="411.0" text="Label" />
       <Button layoutX="349.0" layoutY="407.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Enviar" />
+      <Button layoutX="627.0" layoutY="443.0" mnemonicParsing="false" text="Volver" />
    </children>
 </AnchorPane>

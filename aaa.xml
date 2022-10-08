@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ListSalas>
+    <salas Nombre="LOL" ID="3">
+        <messages>
+            <user>
+                <nickname>antonio</nickname>
+                <ID>1</ID>
+            </user>
+            <message>aaaaaaaaaaaaaaaaaa</message>
+            <ID>5</ID>
+        </messages>
+        <messages>
+            <user>
+                <nickname>paco</nickname>
+                <ID>2</ID>
+            </user>
+            <message>bbbbbbbbbbbbbbbbb</message>
+            <ID>6</ID>
+        </messages>
+    </salas>
+    <salas Nombre="VALO" ID="4"/>
+</ListSalas>
