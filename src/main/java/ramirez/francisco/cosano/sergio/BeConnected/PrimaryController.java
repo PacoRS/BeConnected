@@ -15,8 +15,7 @@ import ramirez.francisco.cosano.sergio.BeConnected.model.User;
 public class PrimaryController {
 
     protected static User globalUser;
-	@FXML 
-
+	@FXML
 	private ImageView photo;
 	@FXML
 	private TextField name;
@@ -37,6 +36,7 @@ public class PrimaryController {
 					alert.setTitle("Error");
 					alert.setHeaderText("Error");
 					alert.setContentText("El nickname ya existe, introduzca otra por favor");
+					alert.showAndWait();
 				}
 			} while (flag);
 
@@ -45,6 +45,7 @@ public class PrimaryController {
 			alert.setTitle("Error");
 			alert.setHeaderText("Error");
 			alert.setContentText("El nickname no puede estar vacio");
+			alert.showAndWait();
 		}
 	}
 
@@ -60,7 +61,6 @@ public class PrimaryController {
 				}
 			}
 		}
-
 		return flag;
 	}
 }
