@@ -54,7 +54,7 @@ public class SecondaryController {
     private void loadSalas(){
         RepoSala rs = RepoSala.getRepoSala();
         rs.loadFile("aaa.xml");
-        ArrayList<Sala> salas = rs.getSalas();
+        ArrayList<Sala> salas = rs.devuelveArray();
         for (Sala sala:salas){
             MenuItem item = new MenuItem(sala.getName());
             listaSalas.getItems().add(item);
@@ -66,7 +66,7 @@ public class SecondaryController {
         if(!name.equals("")){
             RepoSala rs = RepoSala.getRepoSala();
             rs.loadFile("aaa.xml");
-            ArrayList<Sala> salas = rs.getSalas();
+            ArrayList<Sala> salas = rs.devuelveArray();
             globalSala = new Sala(name);
             for (Sala s:salas){
                 if(s.getName().equals(globalSala.getName())){
@@ -86,7 +86,7 @@ public class SecondaryController {
         boolean flag = false;
          RepoSala rs = RepoSala.getRepoSala();
          rs.loadFile("aaa.xml");
-         ArrayList<Sala> salas = rs.getSalas();
+         ArrayList<Sala> salas = rs.devuelveArray();
          for(Sala s: salas){
              if(!s.getName().equals(nombre)){
                  flag = true;

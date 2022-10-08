@@ -14,9 +14,6 @@ import ramirez.francisco.cosano.sergio.BeConnected.model.User;
 
 public class PrimaryController {
 
-	private static User globalUser;
-	@FXML
-
     protected static User globalUser;
 	@FXML 
 
@@ -52,8 +49,18 @@ public class PrimaryController {
 	}
 
 	private boolean compareUsers(User user) {
-		return false;
-		
+		boolean flag = true;
+		RepoSala rs = RepoSala.getRepoSala();
+		rs.loadFile("aaa.xml");
+		ArrayList<Sala> salas = rs.devuelveArray();
+		for (Sala sala : salas) {
+			for (User user1 : sala.getUsers()) {
+				if (user1.getNickname().equals(user.getNickname())) {
+					flag = false;
+				}
+			}
+		}
 
+		return flag;
 	}
 }
