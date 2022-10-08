@@ -23,8 +23,8 @@ public class User implements IUser, Serializable {
     
     
     public User(String nickname) {
-
 		this.nickname = nickname;
+        this.ID= (int) (Math.random() * 1000000);
 	}
 
 	public User() {

@@ -1,14 +1,18 @@
 package ramirez.francisco.cosano.sergio.BeConnected;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import ramirez.francisco.cosano.sergio.BeConnected.model.RepoSala;
 import ramirez.francisco.cosano.sergio.BeConnected.model.Sala;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class SecondaryController {
+public class SecondaryController implements Initializable {
 
     protected static Sala globalSala;
     @FXML
@@ -73,6 +77,7 @@ public class SecondaryController {
             for (Sala s:salas){
                 if(s.getName().equals(globalSala.getName())){
                     s.addUser(PrimaryController.globalUser);
+                    rs.saveFile("aaa.xml");
                     App.setRoot("terciary");
                 }
             }
@@ -100,4 +105,17 @@ public class SecondaryController {
         return flag;
     }
 
+    public void fill(){ //terminar, no funciona correctamente
+           ObservableList<MenuItem> hola= listaSalas.getItems();
+           for (MenuItem m:hola){
+               if (m.isVisible()){
+                     nombreSala.setText(m.getText());
+               }
+           }
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadSalas();
+        fill();
+    }
 }

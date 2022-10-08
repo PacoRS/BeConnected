@@ -7,11 +7,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.*;
 
 import java.io.File;
 import java.io.Serializable;
@@ -22,6 +18,7 @@ import java.util.ArrayList;
 public class Sala implements ISala, Serializable {
 	private static final long serialVersionUID = 1L;
 	private ArrayList<Message> messages;
+	@XmlElementWrapper(name = "users")
 	private ArrayList<User> users;
 	@XmlAttribute(name = "Nombre")
 	private String name;
@@ -85,10 +82,6 @@ public class Sala implements ISala, Serializable {
 
 	public void addMessage(Message message) {
 		this.messages.add(message);
-	}
-
-	public void removeMessage(Message message) {
-		this.messages.remove(message);
 	}
 
 	public void addUser(User user) {
