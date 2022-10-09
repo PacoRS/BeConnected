@@ -17,11 +17,6 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <SplitMenuButton fx:id="listaSalas" layoutY="2.0" mnemonicParsing="false" onAction="#loadSalas" prefHeight="25.0" prefWidth="107.0" text="Lista de Salas">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </SplitMenuButton>
+      <SplitMenuButton fx:id="listaSalas" layoutY="2.0" mnemonicParsing="false" onContextMenuRequested="#loadSalas" prefHeight="25.0" prefWidth="107.0" text="Lista de Salas" />
    </children>
 </AnchorPane>

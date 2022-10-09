@@ -17,6 +17,31 @@
             <message>bbbbbbbbbbbbbbbbb</message>
             <ID>6</ID>
         </messages>
+        <users>
+            <users>
+                <nickname>antonio</nickname>
+                <ID>1</ID>
+            </users>
+            <users>
+                <nickname>paco</nickname>
+                <ID>2</ID>
+            </users>
+            <users>
+                <nickname>sergio</nickname>
+                <ID>285340</ID>
+            </users>
+        </users>
     </salas>
-    <salas Nombre="VALO" ID="4"/>
+    <salas Nombre="VALO" ID="4">
+        <users>
+            <users>
+                <nickname>antonio</nickname>
+                <ID>1</ID>
+            </users>
+            <users>
+                <nickname>paco</nickname>
+                <ID>2</ID>
+            </users>
+        </users>
+    </salas>
 </ListSalas>

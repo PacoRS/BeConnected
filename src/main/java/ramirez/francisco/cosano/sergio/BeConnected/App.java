@@ -42,15 +42,10 @@ public class App extends Application {
 		Message m2 = new Message(sal2, u2, "bbbbbbbbbbbbbbbbb", 6);
 		ayuda.add(m1);
 		ayuda.add(m2);
+		ayudaa.add(u1);
+		ayudaa.add(u2);
 		sal = new Sala(ayuda, ayudaa, "LOL", 3);
 		sal2 = new Sala(ayuda2, ayudaa, "VALO", 4);
-
-		repo.addSala(sal);
-		repo.saveFile("aaa.xml");
-		repo.loadFile("aaa.xml");
-		repo.addSala(sal2);
-		repo.saveFile("aaa.xml");
-
 	}
 
 	static void setRoot(String fxml) throws IOException {
