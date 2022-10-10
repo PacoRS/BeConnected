@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 public class SecondaryController implements Initializable {
 
-	protected static Sala globalSala;
+	protected static ArrayList<Sala> globalSalas;
 	@FXML
 	private Button crear;
 	@FXML
@@ -34,10 +34,11 @@ public class SecondaryController implements Initializable {
 			String nombre = nombreSala.getText();
 			if (!nombre.equals("")) {
 				if (compareSalas(nombre)) {
-					globalSala = new Sala(nombre);
 					RepoSala rs = RepoSala.getRepoSala();
-					globalSala.addUser(PrimaryController.globalUser);
-					rs.addSala(globalSala);
+					globalSalas = rs.devuelveArray();
+					Sala sala = new Sala(nombre);
+					sala.addUser(PrimaryController.globalUser);
+					globalSalas.add(sala);
 					rs.saveFile("aaa.xml");
 					flag = true;
 					App.setRoot("terciary");
@@ -55,7 +56,7 @@ public class SecondaryController implements Initializable {
 				alert.setContentText("El nombre de la sala no puede estar vacio");
 				alert.showAndWait();
 			}
-		} while (flag);
+		} while (!flag);
 
 	}
 
@@ -76,10 +77,9 @@ public class SecondaryController implements Initializable {
 		if (!name.equals("")) {
 			RepoSala rs = RepoSala.getRepoSala();
 			rs.loadFile("aaa.xml");
-			ArrayList<Sala> salas = rs.devuelveArray();
-			globalSala = new Sala(name);
-			for (Sala s : salas) {
-				if (s.getName().equals(globalSala.getName())) {
+			globalSalas=rs.devuelveArray();
+			for (Sala s : globalSalas) {
+				if (s.getName().equals(name)) {
 					s.addUser(PrimaryController.globalUser);
 					rs.saveFile("aaa.xml");
 					App.setRoot("terciary");

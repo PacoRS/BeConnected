@@ -48,4 +48,28 @@
             </users>
         </users>
     </salas>
+    <salas Nombre="Rocket" ID="612189">
+        <users>
+            <users>
+                <nickname>prueba</nickname>
+                <ID>506880</ID>
+            </users>
+        </users>
+    </salas>
+    <salas Nombre="csgo" ID="133611">
+        <users>
+            <users>
+                <nickname>prueba2</nickname>
+                <ID>212660</ID>
+            </users>
+        </users>
+    </salas>
+    <salas Nombre="PUBG" ID="584278">
+        <users>
+            <users>
+                <nickname>prueba3</nickname>
+                <ID>597906</ID>
+            </users>
+        </users>
+    </salas>
 </ListSalas>

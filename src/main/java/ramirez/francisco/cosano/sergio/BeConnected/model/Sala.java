@@ -27,7 +27,10 @@ public class Sala implements ISala, Serializable {
 
 	
 	public Sala(String name) {
+		this.messages = new ArrayList<Message>();
+		this.users = new ArrayList<User>();
 		this.name = name;
+		this.ID = (int) (Math.random() * 1000000);
 	}
 
 
