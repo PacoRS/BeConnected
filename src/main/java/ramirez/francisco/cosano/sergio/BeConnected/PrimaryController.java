@@ -14,7 +14,8 @@ import ramirez.francisco.cosano.sergio.BeConnected.model.User;
 
 public class PrimaryController {
 
-    protected static User globalUser;
+	protected static User globalUser;
+
 	@FXML
 	private ImageView photo;
 	@FXML
