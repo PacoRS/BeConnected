@@ -14,6 +14,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
+//Clase RepoSala y sus atributos
 @XmlRootElement(name = "ListSalas")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RepoSala {
@@ -21,14 +22,14 @@ public class RepoSala {
 	private ArrayList<Sala> salas;
 	private static RepoSala _instance;
 	
-	
+	//Devuelve la instancia de la clase
 	public static RepoSala getRepoSala() {
 		if (_instance == null) {
 			_instance = new RepoSala();
 		}
 		return _instance;
 	}
-	
+	//Constructores
 	private RepoSala() {
 		salas=new ArrayList<Sala>();
 	}
@@ -38,6 +39,7 @@ public class RepoSala {
 		this.salas = salas;
 	}
 
+	//Metodo para guardar en XML
 	public void saveFile(String url) {
 		JAXBContext contexto;
 
@@ -52,7 +54,7 @@ public class RepoSala {
 		}
 	}
 	
-
+	//Metodo para cargar de XML
 	public void loadFile(String url) {
 		JAXBContext contexto;
 		try {
@@ -69,7 +71,8 @@ public class RepoSala {
 		}
 
 	}
-	
+
+	//Metodo para añadir una sala
 	public void addSala(Sala s) {
 		salas.add(s);
 	}

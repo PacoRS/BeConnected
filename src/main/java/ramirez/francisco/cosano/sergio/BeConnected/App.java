@@ -24,6 +24,7 @@ public class App extends Application {
 
 	private static Scene scene;
 
+	//Inicia la aplicacion y cargar Datos predeterminados
 	@Override
 	public void start(Stage stage) throws IOException {
 		scene = new Scene(loadFXML("primary"), 640, 480);

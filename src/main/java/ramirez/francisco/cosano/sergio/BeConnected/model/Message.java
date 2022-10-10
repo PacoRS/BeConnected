@@ -20,6 +20,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+//Clase Message y sus atributos
 @XmlRootElement(name = "Message")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Message implements IMessage, Comparable<Message>, Serializable {
@@ -32,7 +33,7 @@ public class Message implements IMessage, Comparable<Message>, Serializable {
     private LocalDateTime date;
 
 
-
+    //Todos los constructores
 	public Message(String message) {
 		this.message = message;
 	}
@@ -62,6 +63,8 @@ public class Message implements IMessage, Comparable<Message>, Serializable {
         this.date = date;
     }
 
+
+    //Getters y Setters
     public Sala getSala() {
         return sala;
     }
@@ -102,6 +105,7 @@ public class Message implements IMessage, Comparable<Message>, Serializable {
         this.date = date;
     }
 
+    //Método para comparar mensajes
     @Override
     public int compareTo(Message o) {
         if (this.date.isBefore(o.date)) {
@@ -113,6 +117,7 @@ public class Message implements IMessage, Comparable<Message>, Serializable {
         }
     }
 
+    //ToString
     @Override
     public String toString() {
         return user.getNickname() + message;
@@ -131,27 +136,11 @@ public class Message implements IMessage, Comparable<Message>, Serializable {
 			e.printStackTrace();
 		}
 	}
-
-	/*public void loadFile(String url) {
-		JAXBContext contexto;
-		try {
-			contexto = JAXBContext.newInstance(RepoSala.class);
-			Unmarshaller um=contexto.createUnmarshaller();
-			
-			RepoSala newClub= (RepoSala) um.unmarshal(new File(url));
-			salas=newClub.salas;
-		
-			
-		} catch (JAXBException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}*/
 }
 
 class LocalDateTimeBind extends XmlAdapter<String, LocalDateTime> {
 
+    //Metodos para formatear los LocalDateTime
     @Override
     public LocalDateTime unmarshal(String val) {
         return LocalDateTime.parse(val, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SS"));

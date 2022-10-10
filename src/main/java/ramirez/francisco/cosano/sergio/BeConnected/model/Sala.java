@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+//Clase Sala y sus atributos
 @XmlRootElement(name = "Sala")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Sala implements ISala, Serializable {
@@ -30,6 +31,7 @@ public class Sala implements ISala, Serializable {
 	@XmlAttribute(name = "ID")
 	private Integer ID;
 
+	// Todos los constructores
 	public Sala(String name) {
 		this.messages = new ArrayList<Message>();
 		this.users = new ArrayList<User>();
@@ -51,6 +53,7 @@ public class Sala implements ISala, Serializable {
 		this.ID = ID;
 	}
 
+	// Getters y Setters
 	public ArrayList<Message> getMessages() {
 		return messages;
 	}
@@ -107,6 +110,7 @@ public class Sala implements ISala, Serializable {
 
 	}
 
+	//Metodo para comparar las salas
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -119,6 +123,7 @@ public class Sala implements ISala, Serializable {
 		return Objects.equals(name, other.name);
 	}
 
+	//ToString
 	@Override
 	public String toString() {
 		return "Sala [messages=" + messages + ", users=" + users + ", name=" + name + ", ID=" + ID + "]";

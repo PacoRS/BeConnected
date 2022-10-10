@@ -26,6 +26,8 @@ public class SecondaryController implements Initializable {
 	private SplitMenuButton listaSalas = new SplitMenuButton();
 	private static String CopiaNombSala;
 
+
+	//Metodo que valida el nombre de la sala y lo compara para que no se repita, y la añade a la lista de salas
 	@FXML
 	private void crearSala() throws IOException {
 		boolean flag = false;
@@ -60,6 +62,7 @@ public class SecondaryController implements Initializable {
 
 	}
 
+	//Metodo que carga todas las salas
 	@FXML
 	private void loadSalas() {
 		RepoSala rs = RepoSala.getRepoSala();
@@ -71,6 +74,7 @@ public class SecondaryController implements Initializable {
 		}
 	}
 
+	//Metodo para unirte a una sala predefinida y añade al usuario a la sala
 	@FXML
 	private void unirSala() throws IOException {
 		String name = nombreSala.getText();
@@ -94,6 +98,7 @@ public class SecondaryController implements Initializable {
 		}
 	}
 
+	//Metodo que compara el nombre de la sala con las que ya existen
 	private boolean compareSalas(String nombre) {
 		boolean flag = false;
 		RepoSala rs = RepoSala.getRepoSala();
@@ -109,6 +114,7 @@ public class SecondaryController implements Initializable {
 		return flag;
 	}
 
+	//Metodo que carga la sala seleccionada
 	public void fill() { // terminar, no funciona correctamente
 		ObservableList<MenuItem> hola = listaSalas.getItems();
 		for (MenuItem m : hola) {
@@ -119,6 +125,7 @@ public class SecondaryController implements Initializable {
 		}
 	}
 
+	//Metodo que devuelve una sala del array dado un nombre
 	public static Sala devuelveSala(String name) {
 		Sala s1 = new Sala();
 		RepoSala rs = RepoSala.getRepoSala();
@@ -132,16 +139,18 @@ public class SecondaryController implements Initializable {
 		return s1;
 	}
 
+	//Metodo que inicia la cargar de salas
 	@Override
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		loadSalas();
 		fill();
 	}
 
+	//Metodo que devuelve el nombre de la sala
 	public static String getCopiaNombSala() {
 		return CopiaNombSala;
 	}
-
+	//Metodo que cambia el nombre de la sala
 	public static void setCopiaNombSala(String CopiaNombSala) {
 		SecondaryController.CopiaNombSala = CopiaNombSala;
 	}

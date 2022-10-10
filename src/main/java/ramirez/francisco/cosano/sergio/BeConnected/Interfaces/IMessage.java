@@ -1,7 +1,7 @@
 package ramirez.francisco.cosano.sergio.BeConnected.Interfaces;
 
 import java.time.LocalDateTime;
-
+//Interfaz para Message
 public interface IMessage {
     ISala sala = null;
     IUser user = null;

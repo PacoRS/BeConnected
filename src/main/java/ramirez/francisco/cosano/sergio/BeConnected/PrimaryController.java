@@ -23,6 +23,7 @@ public class PrimaryController {
 	@FXML
 	private Button button;
 
+	//Metodo que valida el nickname del usuario, lo guarda en la variable global y lo envia a la siguiente ventana
 	@FXML
 	private void switchToSecondary() throws IOException {
 		String nickname = name.getText();
@@ -50,6 +51,7 @@ public class PrimaryController {
 		}
 	}
 
+	//Metodo que compara el nickname del usuario con los de la lista de usuarios
 	private boolean compareUsers(User user) {
 		boolean flag = true;
 		RepoSala rs = RepoSala.getRepoSala();

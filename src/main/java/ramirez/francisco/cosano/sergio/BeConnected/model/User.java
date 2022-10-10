@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.Objects;
 
+//Clase User y sus atributos
 @XmlRootElement(name = "User")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class User implements IUser, Serializable {
@@ -22,7 +23,7 @@ public class User implements IUser, Serializable {
     private Integer ID;
 
     
-    
+    // Todos los constructores
     public User(String nickname) {
 		this.nickname = nickname;
         this.ID= (int) (Math.random() * 1000000);
@@ -38,6 +39,7 @@ public class User implements IUser, Serializable {
         this.ID = ID;
     }
 
+    // Getters y Setters
     public String getNickname() {
         return nickname;
     }
@@ -54,11 +56,12 @@ public class User implements IUser, Serializable {
         this.ID = ID;
     }
 
+    //Tostring
     @Override
     public String toString() {
         return "User{" + "nickname='" + nickname + '\'' + ", ID=" + ID + '}';
     }
-    
+
     public void saveFile(String url,User user) {
 		JAXBContext contexto;
 
@@ -73,6 +76,7 @@ public class User implements IUser, Serializable {
 		}
 	}
 
+    //Equals y Hashcode
 	@Override
 	public int hashCode() {
 		return Objects.hash(ID, nickname);
@@ -89,22 +93,4 @@ public class User implements IUser, Serializable {
 		User other = (User) obj;
 		return Objects.equals(ID, other.ID) && Objects.equals(nickname, other.nickname);
 	}
-    
-
-	/*public void loadFile(String url) {
-		JAXBContext contexto;
-		try {
-			contexto = JAXBContext.newInstance(RepoSala.class);
-			Unmarshaller um=contexto.createUnmarshaller();
-			
-			RepoSala newClub= (RepoSala) um.unmarshal(new File(url));
-			salas=newClub.salas;
-		
-			
-		} catch (JAXBException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}*/
 }

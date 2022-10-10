@@ -46,6 +46,7 @@ public class TerciaryController {
 	private ObservableList<User> observUser;
 	private ArrayList<User> listUser;
 
+	//Metodo que crea los ObservableList para los mensajes y los usuarios
 	@FXML
 	private void switchToSecondary() throws IOException {
 		listMessages = new ArrayList<>();
@@ -56,6 +57,7 @@ public class TerciaryController {
 
 	}
 
+	//Metodo que carga los mensajes y los usuarios en el tableView
 	private void configuraTabla() {
 		// TODO Auto-generated method stub
 		SecondaryController a = new SecondaryController();
@@ -76,6 +78,8 @@ public class TerciaryController {
 
 	}
 
+	//Metodo que inicia la carga de mensajes y usuarios y los añade al tableView de la sala
+	//refresca la tabla cada segundo
 	@FXML
 	protected void initialize() throws IOException {
 
@@ -108,6 +112,7 @@ public class TerciaryController {
 
 	}
 
+	//Metodo que envia el mensaje a la sala
 	@FXML
 	public void sendMessage() {
 		RepoSala rs = RepoSala.getRepoSala();
@@ -122,6 +127,7 @@ public class TerciaryController {
 		rs.saveFile("aaa.xml");
 	}
 
+	//Metodo que devuelve a la ventana anterior
 	@FXML
 	protected void VuelveSecondary() throws IOException {
 		App.setRoot("secondary");
