@@ -38,6 +38,8 @@ public class App extends Application {
 
 		User u1 = new User("antonio", 1);
 		User u2 = new User("paco", 2);
+		ayudaa.add(u1);
+		ayudaa.add(u2);
 		Message m1 = new Message(sal, u1, "aaaaaaaaaaaaaaaaaa", 5);
 		Message m2 = new Message(sal2, u2, "bbbbbbbbbbbbbbbbb", 6);
 		ayuda.add(m1);
