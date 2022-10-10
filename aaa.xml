@@ -2,20 +2,28 @@
 <ListSalas>
     <salas Nombre="LOL" ID="3">
         <messages>
+            <sala Nombre="" ID="0">
+                <users/>
+            </sala>
             <user>
                 <nickname>antonio</nickname>
                 <ID>1</ID>
             </user>
             <message>aaaaaaaaaaaaaaaaaa</message>
             <ID>5</ID>
+            <date>2022-10-10 18:43:42:48</date>
         </messages>
         <messages>
+            <sala Nombre="" ID="0">
+                <users/>
+            </sala>
             <user>
                 <nickname>paco</nickname>
                 <ID>2</ID>
             </user>
             <message>bbbbbbbbbbbbbbbbb</message>
             <ID>6</ID>
+            <date>2022-10-10 18:43:42:48</date>
         </messages>
         <users>
             <users>
@@ -33,82 +41,25 @@
         </users>
     </salas>
     <salas Nombre="VALO" ID="4">
+        <messages>
+            <message>hola</message>
+            <ID>0</ID>
+        </messages>
+        <messages>
+            <user>
+                <nickname>ffsafasdfas</nickname>
+                <ID>208375</ID>
+            </user>
+            <message>que tal</message>
+        </messages>
         <users>
             <users>
                 <nickname>antonio</nickname>
                 <ID>1</ID>
             </users>
             <users>
-                <nickname>paco</nickname>
-                <ID>2</ID>
-            </users>
-        </users>
-    </salas>
-    <salas Nombre="Rocket" ID="612189">
-        <users>
-            <users>
-                <nickname>prueba</nickname>
-                <ID>506880</ID>
-            </users>
-            <users>
-                <nickname>hhhhm</nickname>
-                <ID>534274</ID>
-            </users>
-            <users>
-                <nickname>we</nickname>
-                <ID>549243</ID>
-            </users>
-        </users>
-    </salas>
-    <salas Nombre="csgo" ID="133611">
-        <users>
-            <users>
-                <nickname>prueba2</nickname>
-                <ID>212660</ID>
-            </users>
-            <users>
-                <nickname>pacotee</nickname>
-                <ID>882352</ID>
-            </users>
-        </users>
-    </salas>
-    <salas Nombre="PUBG" ID="584278">
-        <users>
-            <users>
-                <nickname>prueba3</nickname>
-                <ID>597906</ID>
-            </users>
-            <users>
-                <nickname>gtrr</nickname>
-                <ID>470993</ID>
-            </users>
-        </users>
-    </salas>
-    <salas Nombre="gg" ID="97008">
-        <users>
-            <users>
-                <nickname>ggg</nickname>
-                <ID>898261</ID>
-            </users>
-            <users>
-                <nickname>gggg</nickname>
-                <ID>814300</ID>
-            </users>
-            <users>
-                <nickname>rrr</nickname>
-                <ID>445195</ID>
-            </users>
-        </users>
-    </salas>
-    <salas Nombre="csgo" ID="133611">
-        <users>
-            <users>
-                <nickname>prueba2</nickname>
-                <ID>212660</ID>
-            </users>
-            <users>
-                <nickname>pacotee</nickname>
-                <ID>882352</ID>
+                <nickname>gdfgdsfgds</nickname>
+                <ID>912636</ID>
             </users>
         </users>
     </salas>
