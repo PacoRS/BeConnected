@@ -3,7 +3,10 @@
     <salas Nombre="LOL" ID="3">
         <messages>
             <sala Nombre="" ID="0">
-                <users/>
+                <users>
+                    <nickname></nickname>
+                    <ID>0</ID>
+                </users>
             </sala>
             <user>
                 <nickname>antonio</nickname>
@@ -15,7 +18,10 @@
         </messages>
         <messages>
             <sala Nombre="" ID="0">
-                <users/>
+                <users>
+                    <nickname></nickname>
+                    <ID>0</ID>
+                </users>
             </sala>
             <user>
                 <nickname>paco</nickname>
@@ -26,61 +32,46 @@
             <date>2022-10-10 18:43:42:48</date>
         </messages>
         <users>
-            <users>
-                <nickname>antonio</nickname>
-                <ID>1</ID>
-            </users>
-            <users>
-                <nickname>paco</nickname>
-                <ID>2</ID>
-            </users>
-            <users>
-                <nickname>sergio</nickname>
-                <ID>285340</ID>
-            </users>
+            <nickname></nickname>
+            <ID>0</ID>
         </users>
     </salas>
     <salas Nombre="VALO" ID="4">
         <messages>
             <user>
-                <nickname>ffsafasdfas</nickname>
-                <ID>208375</ID>
+                <nickname>a1</nickname>
+                <ID>368667</ID>
             </user>
-            <message>que tal</message>
+            <message>telaaaaaaaaaaaaaa</message>
             <ID>0</ID>
         </messages>
         <messages>
             <user>
-                <nickname>hgkalhsadkfsjl</nickname>
-                <ID>171377</ID>
+                <nickname>a2</nickname>
+                <ID>836016</ID>
             </user>
-            <message>hola</message>
+            <message>feooooooooooooooo</message>
             <ID>0</ID>
-        </messages>
-        <messages>
-            <user>
-                <nickname>sfadfsafsaf</nickname>
-                <ID>898443</ID>
-            </user>
-            <message>fdfsafs</message>
-            <ID>0</ID>
-        </messages>
-        <messages>
-            <user>
-                <nickname>fsdfasdfasfas</nickname>
-                <ID>6041</ID>
-            </user>
-            <message>que guay</message>
         </messages>
         <users>
-            <users>
-                <nickname>antonio</nickname>
-                <ID>1</ID>
-            </users>
-            <users>
-                <nickname>gdfgdsfgds</nickname>
-                <ID>912636</ID>
-            </users>
+            <nickname>b2</nickname>
+            <ID>956471</ID>
+        </users>
+        <users>
+            <nickname>b1</nickname>
+            <ID>330334</ID>
+        </users>
+        <users>
+            <nickname>c1</nickname>
+            <ID>65824</ID>
+        </users>
+        <users>
+            <nickname>v1</nickname>
+            <ID>957155</ID>
+        </users>
+        <users>
+            <nickname>v1</nickname>
+            <ID>957155</ID>
         </users>
     </salas>
 </ListSalas>

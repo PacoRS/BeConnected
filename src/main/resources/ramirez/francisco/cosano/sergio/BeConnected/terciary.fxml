@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -16,16 +15,16 @@
                <children>
                   <TableView fx:id="messages" layoutX="67.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="columMessages" prefWidth="418.0" text="C1" />
+                      <TableColumn fx:id="columMessages" prefWidth="418.0" text="MENSSAGES" />
                     </columns>
                   </TableView>
                </children>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="157.0">
                <children>
-                  <TableView fx:id="usersActive" layoutX="17.0" layoutY="80.0" prefHeight="474.0" prefWidth="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="usersActive" layoutX="17.0" layoutY="80.0" prefHeight="374.0" prefWidth="258.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <columns>
-                        <TableColumn fx:id="columEntradas" prefWidth="293.9999694426854" text="Usuarios en Linea" />
+                        <TableColumn fx:id="columUser" prefWidth="293.9999694426854" text="USUARIOS EN LINEA" />
                      </columns>
                   </TableView>
                </children>
@@ -33,8 +32,7 @@
          </items>
       </SplitPane>
       <TextField fx:id="text" layoutX="74.0" layoutY="404.0" prefHeight="32.0" prefWidth="258.0" />
-      <Label fx:id="cont" layoutX="560.0" layoutY="411.0" text="Label" />
       <Button fx:id="send" layoutX="349.0" layoutY="407.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="25.0" prefWidth="58.0" text="Enviar" />
-      <Button fx:id="back" layoutX="627.0" layoutY="443.0" mnemonicParsing="false" text="Volver" />
+      <Button fx:id="back" layoutX="627.0" layoutY="443.0" mnemonicParsing="false" onAction="#VuelveSecondary" text="Volver" />
    </children>
 </AnchorPane>

@@ -81,7 +81,7 @@ public class SecondaryController implements Initializable {
 			for (Sala s : globalSalas) {
 				if (s.getName().equals(name)) {
 					s.addUser(PrimaryController.globalUser);
-					//rs.saveFile("aaa.xml");
+					rs.saveFile("aaa.xml");
 					App.setRoot("terciary");
 				}
 			}
@@ -119,7 +119,7 @@ public class SecondaryController implements Initializable {
 		}
 	}
 
-	public Sala devuelveSala(String name) {
+	public static Sala devuelveSala(String name) {
 		Sala s1 = new Sala();
 		RepoSala rs = RepoSala.getRepoSala();
 		rs.loadFile("aaa.xml");
