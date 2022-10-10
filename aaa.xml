@@ -42,15 +42,35 @@
     </salas>
     <salas Nombre="VALO" ID="4">
         <messages>
-            <message>hola</message>
-            <ID>0</ID>
-        </messages>
-        <messages>
             <user>
                 <nickname>ffsafasdfas</nickname>
                 <ID>208375</ID>
             </user>
             <message>que tal</message>
+            <ID>0</ID>
+        </messages>
+        <messages>
+            <user>
+                <nickname>hgkalhsadkfsjl</nickname>
+                <ID>171377</ID>
+            </user>
+            <message>hola</message>
+            <ID>0</ID>
+        </messages>
+        <messages>
+            <user>
+                <nickname>sfadfsafsaf</nickname>
+                <ID>898443</ID>
+            </user>
+            <message>fdfsafs</message>
+            <ID>0</ID>
+        </messages>
+        <messages>
+            <user>
+                <nickname>fsdfasdfasfas</nickname>
+                <ID>6041</ID>
+            </user>
+            <message>que guay</message>
         </messages>
         <users>
             <users>

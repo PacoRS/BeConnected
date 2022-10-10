@@ -51,7 +51,7 @@ public class TerciaryController {
 
 		columMessages.setCellValueFactory(Message -> {
 			SimpleStringProperty ssp = new SimpleStringProperty();
-			ssp.setValue(Message.getValue().getMessage() + Message.getValue().getUser());
+			ssp.setValue(Message.getValue().getUser().getNickname()+"\n"+Message.getValue().getMessage() );
 			return ssp;
 		});
 
@@ -78,9 +78,5 @@ public class TerciaryController {
 		m1.setUser(PrimaryController.globalUser);
 		sal3.addMessage(m1);
 		rs.saveFile("aaa.xml");
-		
-		
-		
-		
 	}
 }
