@@ -30,10 +30,6 @@
                 <nickname>sergio</nickname>
                 <ID>285340</ID>
             </users>
-            <users>
-                <nickname>asdasd</nickname>
-                <ID>309859</ID>
-            </users>
         </users>
     </salas>
     <salas Nombre="VALO" ID="4">
@@ -54,6 +50,14 @@
                 <nickname>prueba</nickname>
                 <ID>506880</ID>
             </users>
+            <users>
+                <nickname>hhhhm</nickname>
+                <ID>534274</ID>
+            </users>
+            <users>
+                <nickname>we</nickname>
+                <ID>549243</ID>
+            </users>
         </users>
     </salas>
     <salas Nombre="csgo" ID="133611">
@@ -62,6 +66,10 @@
                 <nickname>prueba2</nickname>
                 <ID>212660</ID>
             </users>
+            <users>
+                <nickname>pacotee</nickname>
+                <ID>882352</ID>
+            </users>
         </users>
     </salas>
     <salas Nombre="PUBG" ID="584278">
@@ -69,6 +77,38 @@
             <users>
                 <nickname>prueba3</nickname>
                 <ID>597906</ID>
+            </users>
+            <users>
+                <nickname>gtrr</nickname>
+                <ID>470993</ID>
+            </users>
+        </users>
+    </salas>
+    <salas Nombre="gg" ID="97008">
+        <users>
+            <users>
+                <nickname>ggg</nickname>
+                <ID>898261</ID>
+            </users>
+            <users>
+                <nickname>gggg</nickname>
+                <ID>814300</ID>
+            </users>
+            <users>
+                <nickname>rrr</nickname>
+                <ID>445195</ID>
+            </users>
+        </users>
+    </salas>
+    <salas Nombre="csgo" ID="133611">
+        <users>
+            <users>
+                <nickname>prueba2</nickname>
+                <ID>212660</ID>
+            </users>
+            <users>
+                <nickname>pacotee</nickname>
+                <ID>882352</ID>
             </users>
         </users>
     </salas>
