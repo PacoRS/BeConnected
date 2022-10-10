@@ -51,18 +51,7 @@ public class RepoSala {
 			e.printStackTrace();
 		}
 	}
-	/*public static void marshal(RepoSala ur, File f) throws IOException, JAXBException {
-		try(BufferedWriter writer = new BufferedWriter(new FileWriter(f))){
-			JAXBContext context = JAXBContext.newInstance(RepoSala.class);
-			Marshaller m = context.createMarshaller();
-			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-			m.setProperty(Marshaller.JAXB_ENCODING, "utf-8");
-			m.marshal(ur, writer);
-			//writer.close();
-		}catch(IOException e) {
-			e.printStackTrace();
-		}
-	}*/
+	
 
 	public void loadFile(String url) {
 		JAXBContext contexto;

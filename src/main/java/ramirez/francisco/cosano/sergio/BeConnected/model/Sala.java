@@ -1,5 +1,8 @@
 package ramirez.francisco.cosano.sergio.BeConnected.model;
 
+import ramirez.francisco.cosano.sergio.BeConnected.App;
+import ramirez.francisco.cosano.sergio.BeConnected.PrimaryController;
+import ramirez.francisco.cosano.sergio.BeConnected.SecondaryController;
 import ramirez.francisco.cosano.sergio.BeConnected.Interfaces.ISala;
 import ramirez.francisco.cosano.sergio.BeConnected.Utils.Util;
 
@@ -8,7 +11,6 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.*;
-
 
 import java.io.File;
 import java.io.Serializable;
@@ -21,7 +23,7 @@ import java.util.Objects;
 public class Sala implements ISala, Serializable {
 	private static final long serialVersionUID = 1L;
 	private ArrayList<Message> messages;
-	@XmlElementWrapper(name = "users")
+
 	private ArrayList<User> users;
 	@XmlAttribute(name = "Nombre")
 	private String name;
@@ -90,14 +92,20 @@ public class Sala implements ISala, Serializable {
 	}
 
 	public void removeUser(User user) {
+
 		this.users.remove(user);
+
 	}
 
 	public ArrayList<Message> getall() {
 		return messages;
 
 	}
-	
+
+	public ArrayList<User> getallUser() {
+		return users;
+
+	}
 
 	@Override
 	public boolean equals(Object obj) {

@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import java.io.File;
 import java.io.Serializable;
+import java.util.Objects;
 
 @XmlRootElement(name = "User")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -71,6 +72,24 @@ public class User implements IUser, Serializable {
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(ID, nickname);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		return Objects.equals(ID, other.ID) && Objects.equals(nickname, other.nickname);
+	}
+    
 
 	/*public void loadFile(String url) {
 		JAXBContext contexto;
