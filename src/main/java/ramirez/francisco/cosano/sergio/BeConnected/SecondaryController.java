@@ -24,7 +24,7 @@ public class SecondaryController implements Initializable {
 	private TextField nombreSala = new TextField();
 	@FXML
 	private SplitMenuButton listaSalas = new SplitMenuButton();
-	
+	private static String CopiaNombSala;
 
 	@FXML
 	private void crearSala() throws IOException {
@@ -77,7 +77,7 @@ public class SecondaryController implements Initializable {
 		if (!name.equals("")) {
 			RepoSala rs = RepoSala.getRepoSala();
 			rs.loadFile("aaa.xml");
-			globalSalas=rs.devuelveArray();
+			globalSalas = rs.devuelveArray();
 			for (Sala s : globalSalas) {
 				if (s.getName().equals(name)) {
 					s.addUser(PrimaryController.globalUser);
@@ -112,10 +112,24 @@ public class SecondaryController implements Initializable {
 	public void fill() { // terminar, no funciona correctamente
 		ObservableList<MenuItem> hola = listaSalas.getItems();
 		for (MenuItem m : hola) {
-			m.setOnAction((e)-> {
+			m.setOnAction((e) -> {
 				nombreSala.setText(m.getText());
+				CopiaNombSala = m.getText();
 			});
 		}
+	}
+
+	public Sala devuelveSala(String name) {
+		Sala s1 = new Sala();
+		RepoSala rs = RepoSala.getRepoSala();
+		rs.loadFile("aaa.xml");
+		ArrayList<Sala> salas = rs.devuelveArray();
+		for (Sala sala : salas) {
+			if (sala.getName().equals(name)) {
+				s1=sala;
+			}
+		}
+		return s1;
 	}
 
 	@Override
@@ -123,4 +137,13 @@ public class SecondaryController implements Initializable {
 		loadSalas();
 		fill();
 	}
+
+	public static String getCopiaNombSala() {
+		return CopiaNombSala;
+	}
+
+	public static void setCopiaNombSala(String CopiaNombSala) {
+		SecondaryController.CopiaNombSala = CopiaNombSala;
+	}
+
 }

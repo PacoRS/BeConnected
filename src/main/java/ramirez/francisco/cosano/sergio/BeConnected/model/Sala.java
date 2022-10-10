@@ -9,9 +9,12 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.*;
 
+
 import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 @XmlRootElement(name = "Sala")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -25,14 +28,12 @@ public class Sala implements ISala, Serializable {
 	@XmlAttribute(name = "ID")
 	private Integer ID;
 
-	
 	public Sala(String name) {
 		this.messages = new ArrayList<Message>();
 		this.users = new ArrayList<User>();
 		this.name = name;
 		this.ID = (int) (Math.random() * 1000000);
 	}
-
 
 	public Sala() {
 		this.messages = new ArrayList<Message>();
@@ -41,15 +42,12 @@ public class Sala implements ISala, Serializable {
 		this.ID = 0;
 	}
 
-
 	public Sala(ArrayList<Message> messages, ArrayList<User> users, String name, Integer ID) {
 		this.messages = messages;
 		this.users = users;
 		this.name = name;
 		this.ID = ID;
 	}
-	
-	
 
 	public ArrayList<Message> getMessages() {
 		return messages;
@@ -90,8 +88,32 @@ public class Sala implements ISala, Serializable {
 	public void addUser(User user) {
 		this.users.add(user);
 	}
+
 	public void removeUser(User user) {
 		this.users.remove(user);
+	}
+
+	public ArrayList<Message> getall() {
+		return messages;
+
+	}
+	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Sala other = (Sala) obj;
+		return Objects.equals(name, other.name);
+	}
+
+	@Override
+	public String toString() {
+		return "Sala [messages=" + messages + ", users=" + users + ", name=" + name + ", ID=" + ID + "]";
 	}
 
 }
