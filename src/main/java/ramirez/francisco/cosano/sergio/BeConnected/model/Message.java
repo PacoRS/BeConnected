@@ -115,7 +115,7 @@ public class Message implements IMessage, Comparable<Message>, Serializable {
 
     @Override
     public String toString() {
-        return user.getNickname() + "\n" + message+" "+ date;
+        return user.getNickname() + message;
     }
     
 	public void saveFile(String url,Message men) {

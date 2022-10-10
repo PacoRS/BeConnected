@@ -51,7 +51,7 @@ public class TerciaryController {
 
 		columMessages.setCellValueFactory(Message -> {
 			SimpleStringProperty ssp = new SimpleStringProperty();
-			ssp.setValue(Message.getValue().getMessage() + Message.getValue().getUser());
+			ssp.setValue(Message.getValue().getUser().getNickname()+"\n"+Message.getValue().getMessage() );
 			return ssp;
 		});
 
@@ -69,15 +69,14 @@ public class TerciaryController {
 	@FXML
 	public void sendMessage() {
 		RepoSala rs = RepoSala.getRepoSala();
+		SecondaryController a = new SecondaryController();
+		Sala sal3 = a.devuelveSala(a.getCopiaNombSala());
 		Message m1 ;
 		String message = text.getText();
 		this.observMessages.add(m1=new Message(message));
 		this.text.setText("");
 		m1.setUser(PrimaryController.globalUser);
+		sal3.addMessage(m1);
 		rs.saveFile("aaa.xml");
-		
-		
-		
-		
 	}
 }
